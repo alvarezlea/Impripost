@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fdashboard"
+    }
+  },
+  "defaultProject": "fdashboard",
+  "cli": {
+    "analytics": "4377eecc-724f-4be8-bdaa-124f67987a0e"
+  }
 }
