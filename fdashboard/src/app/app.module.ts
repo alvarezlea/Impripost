@@ -5,14 +5,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SuggestionsComponent } from './suggestions/suggestions.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
+import { SuggestionsComponent } from  './components/suggestions/suggestions.component';
+import { RegisterComponent } from './components/register/register.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+
+// Aqui especifico las rutas de la aplicacion
 
 const routes : Routes = [
   { path: '', redirectTo:'dashboard', pathMatch: 'full'},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
   { path: 'suggestion', component: SuggestionsComponent}
 ]
 
@@ -20,12 +26,17 @@ const routes : Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,    
     LoginComponent,
-    DashboardComponent,
-    SuggestionsComponent
+    SuggestionsComponent,
+    RegisterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       routes,
       { enableTracing : false }

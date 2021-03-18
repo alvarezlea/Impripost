@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="jumbotron my-5">
+        <h4><u>Inicio de sesión</u></h4>
+        <br/>
+        <form [formGroup]="f" autocomplete="off">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input class="form-control" type="text" formControlName="usuario" id="usuario">
+            </div>
+            <div *ngIf="f.controls.usuario.errors && f.controls.usuario.dirty" class="alert alert-danger">
+                <div *ngIf="f.controls.usuario.errors.required">El campo es requerido</div>
+                <div *ngIf="f.controls.usuario.errors.minlength">Cantidad mínima de caracteres ({{f.controls.usuario.errors.minlength.requiredLength}}) no alcanzada</div>
+                <div *ngIf="f.controls.usuario.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.usuario.errors.maxlength.requiredLength}})  alcanzada</div>
+                <div *ngIf="f.controls.usuario.errors.conEspacio">No se permiten espacios en este campo</div>
+            </div>
+
+            <div class="form-group">
+                    <label for="clave">Clave</label>
+                    <input class="form-control" type="password" formControlName="clave" id="clave">
+            </div>
+            <div *ngIf="f.controls.clave.errors && f.controls.clave.dirty" class="alert alert-danger">
+                <div *ngIf="f.controls.clave.errors.required">El campo es requerido</div>
+                <div *ngIf="f.controls.clave.errors.minlength">Cantidad mínima de caracteres ({{f.controls.clave.errors.minlength.requiredLength}}) no alcanzada</div>
+                <div *ngIf="f.controls.clave.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.clave.errors.maxlength.requiredLength}})  alcanzada</div>
+                <div *ngIf="f.controls.clave.errors.conEspacio">No se permiten espacios en este campo</div>
+            </div>
+
+            <button class="btn btn-success my-3" [disabled]="!f.valid" (click)="enviar()">Enviar</button>
+    
+        </form>
+
+
+        <!-- <br>
+        <p>Debug : Validaciones del campo</p>
+        <pre>{{ f.controls.usuario.errors | json }}</pre>
+    
+        <p>Datos del formulario reactivo</p>
+        <pre>{{ f.value | json }}</pre> -->
+
+        
+    </div>    
+</div>
