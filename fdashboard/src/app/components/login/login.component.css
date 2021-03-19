@@ -1,7 +1,21 @@
 .jumbotron {
-    background-color: #fffefe;
-    color: rgb(107, 107, 106);
+    background-color: rgb(203, 206, 203);
+    color: rgb(236, 31, 31);
 }
+
 h4 {
     text-align: center;
+}
+
+.textarea{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.card-title{
+    text-align: center !important;
+}
+
+.form-group {
+    color: rgb(75, 73, 73);
 }

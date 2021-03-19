@@ -1,64 +1,62 @@
 <div class="container">
-    <div class="jumbotron my-5">
-        <h4><u>Formulario de sugerencias</u></h4>
-        <br/>
-        <form [formGroup]="f" autocomplete="off">
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input class="form-control" type="text" formControlName="nombre" id="nombre">
-            </div>
-            <div *ngIf="f.controls.nombre.errors && f.controls.nombre.dirty" class="alert alert-danger">
-                <div *ngIf="f.controls.nombre.errors.required">El campo es requerido</div>
-                <div *ngIf="f.controls.nombre.errors.minlength">Cantidad mínima de caracteres ({{f.controls.nombre.errors.minlength.requiredLength}}) no alcanzada</div>
-                <div *ngIf="f.controls.nombre.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.nombre.errors.maxlength.requiredLength}})  alcanzada</div>
-                <div *ngIf="f.controls.nombre.errors.conEspacio">No se permiten espacios en este campo</div>
-            </div>
+    <div class="jumbotron my-2">
+        <div class="row">
+            <div class="col-sm-12 offset-md-2 col-md-8 offset-md-2">
+                <div class="card">
+                <div class="card-body">
+                        <h5 class="card-title">Formulario de Sugerencias</h5>        
+                        <form [formGroup]="f" autocomplete="off">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input class="form-control" type="text" formControlName="nombre" id="nombre">
+                            </div>
+                            <div *ngIf="f.controls.nombre.errors && f.controls.nombre.dirty" class="alert alert-danger">
+                                <div *ngIf="f.controls.nombre.errors.required">El campo es requerido</div>
+                                <div *ngIf="f.controls.nombre.errors.minlength">Cantidad mínima de caracteres ({{f.controls.nombre.errors.minlength.requiredLength}}) no alcanzada</div>
+                                <div *ngIf="f.controls.nombre.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.nombre.errors.maxlength.requiredLength}})  alcanzada</div>
+                                <div *ngIf="f.controls.nombre.errors.conEspacio">No se permiten espacios en este campo</div>
+                            </div>
 
-            <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input class="form-control" type="password" formControlName="apellido" id="apellido">
-            </div>
-            <div *ngIf="f.controls.apellido.errors && f.controls.apellido.dirty" class="alert alert-danger">
-                <div *ngIf="f.controls.apellido.errors.required">El campo es requerido</div>
-                <div *ngIf="f.controls.apellido.errors.minlength">Cantidad mínima de caracteres ({{f.controls.apellido.errors.minlength.requiredLength}}) no alcanzada</div>
-                <div *ngIf="f.controls.apellido.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.apellido.errors.maxlength.requiredLength}})  alcanzada</div>
-                <div *ngIf="f.controls.apellido.errors.conEspacio">No se permiten espacios en este campo</div>
-            </div>
+                            <div class="form-group">
+                                    <label for="apellido">Apellido</label>
+                                    <input class="form-control" type="password" formControlName="apellido" id="apellido">
+                            </div>
+                            <div *ngIf="f.controls.apellido.errors && f.controls.apellido.dirty" class="alert alert-danger">
+                                <div *ngIf="f.controls.apellido.errors.required">El campo es requerido</div>
+                                <div *ngIf="f.controls.apellido.errors.minlength">Cantidad mínima de caracteres ({{f.controls.apellido.errors.minlength.requiredLength}}) no alcanzada</div>
+                                <div *ngIf="f.controls.apellido.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.apellido.errors.maxlength.requiredLength}})  alcanzada</div>
+                                <div *ngIf="f.controls.apellido.errors.conEspacio">No se permiten espacios en este campo</div>
+                            </div>
 
-            <!-- <div class="form-group">
-                <label for="apellido">Sector</label>
-                <input class="form-control" type="text" formControlName="sector" id="sector">
-            </div> -->
+                            <div class="form-group">
+                                <label for="sector">Sector:&nbsp;&nbsp; </label>
+                                <select formControlName="sector">
+                                    <option value="administracion">Administración</option>
+                                    <option value="comercial">Comercial</option>
+                                    <option value="sistemas">Sistemas</option>
+                                    <option value="gerencia">Gerencia</option>
+                                    <option value="otros" selected>Otros</option>
+                                </select>
+                            </div>
 
-            <div class="form-group">
-                <label for="sector">Sector:&nbsp;&nbsp; </label>
-                <select formControlName="sector">
-                    <option value="administracion">Administración</option>
-                    <option value="comercial">Comercial</option>
-                    <option value="sistemas">Sistemas</option>
-                    <option value="gerencia">Gerencia</option>
-                    <option value="otros" selected>Otros</option>
-                </select>
-            </div>
+                            <!-- <label for="sugerencia">Sugerencias</label> -->
+                            <div class="form-group">
+                                <textarea class="textarea"  rows="5"  formControlName="sugerencia" id="sugerencia" placeholder ="Escriba aquí su sugerencia..."></textarea>
+                            </div>
 
-            <label for="sugerencia">Sugerencias</label>
-            <div class="form-group">
-                <textarea  rows="10" cols="50" formControlName="sugerencia" id="sugerencia" placeholder ="Escriba aquí su sugerencia..."></textarea>
-            </div>
-
-
-            <button class="btn btn-success my-3" [disabled]="!f.valid" (click)="enviar()">Enviar</button>
-    
-        </form>
-
-
-        <!-- <br>
-        <p>Debug : Validaciones del campo</p>
-        <pre>{{ f.controls.nombre.errors | json }}</pre>
-    
-        <p>Datos del formulario reactivo</p>
-        <pre>{{ f.value | json }}</pre> -->
-
-        
+                            <button class="btn btn-success my-3" [disabled]="!f.valid" (click)="enviar()">Enviar</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </div>        
     </div>    
 </div>
+
+<!-- <br>
+<p>Debug : Validaciones del campo</p>
+<pre>{{ f.controls.nombre.errors | json }}</pre>
+    
+<p>Datos del formulario reactivo</p>
+<pre>{{ f.value | json }}</pre> -->

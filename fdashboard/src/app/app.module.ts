@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SuggestionsComponent } from  './components/suggestions/suggestions.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 // Aqui especifico las rutas de la aplicacion
@@ -41,6 +42,7 @@ const routes : Routes = [
       routes,
       { enableTracing : false }
     ),
+    FontAwesomeModule,
  
   ],
   providers: [],
