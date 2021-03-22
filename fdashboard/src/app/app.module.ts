@@ -11,6 +11,8 @@ import { SuggestionsComponent } from  './components/suggestions/suggestions.comp
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CardComponent } from './components/card/card.component';
+import { DetailcardComponent } from './components/detailcard/detailcard.component';
 
 
 // Aqui especifico las rutas de la aplicacion
@@ -31,7 +33,9 @@ const routes : Routes = [
     LoginComponent,
     SuggestionsComponent,
     RegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardComponent,
+    DetailcardComponent
   ],
   imports: [
     BrowserModule,
