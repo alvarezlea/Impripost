@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VerificarEspacios } from 'src/app/validations/espacios.validator';
-
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   f: FormGroup
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private router:Router) { 
     this.f = fb.group({
       usuario: ['', Validators.compose([
         Validators.required,
@@ -39,6 +39,22 @@ export class LoginComponent implements OnInit {
 
   enviar() {
     console.log(this.f.value)
+    
+    if( (this.f.value.usuario == "admin") &&  (this.f.value.clave === "admin")){
+      console.log("Autentificacion exitosa!");
+
+      // Seteo el rol de administrador.
+      localStorage.setItem('securityrole', JSON.stringify('admin'));
+
+      this.router.navigate(['dashboard'])
+      .then(() => {
+        window.location.reload();
+      });
+
+
+    }
+
+
   }
 
 }

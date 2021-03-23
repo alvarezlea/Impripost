@@ -12,17 +12,20 @@
             <li class="nav-item">
                 <a class="nav-link alinear-centrar" routerLink="/suggestion" routerLinkActive="active">Sugerencias</a>
             </li>
-            <li class="nav-item">
+            
+            <!-- Solo para administradores -->
+            <li *ngIf="rol=='admin'" class="nav-item">                
                 <a routerLink="/projects" title="Crear proyecto!"><i class="fa fa-tasks atr-proyecto"></i></a>                 
                 <a routerLink="/detailsuggestions" title="Nuevos mensajes"><i class="fa fa-envelope atr-aviso"> (3)</i></a>                 
             </li>            
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle atr-admin" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-cogs"></i>
                 </a>                
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" routerLink="/login">Admin</a>
-                    <a class="dropdown-item" routerLink="/dashboard">Salir</a>
+                    <a class="dropdown-item" routerLink="/dashboard" (click)="salir()">Salir</a>
                  </div>
             </li>     
             
