@@ -1,6 +1,7 @@
 .card-header {
-    color: rgb(236, 31, 31, 0.80);
-    font-weight: bold;
+    /* color: rgb(236, 31, 31, 0.80); */
+    color: rgb(251, 71, 0, 1);
+    /* font-weight: bold; */
     size: 16px;
     text-align: left;    
 }
@@ -20,6 +21,6 @@
 }
 
 .icon{
-    /* color: #45da27d7 !important;  */
-    color: #17a2b8;
+    color: #f8ab06d7 !important; 
+    /* color: #17a2b8; */
 }

@@ -3,16 +3,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+// Aqui importo mis componentes para usarlos en la app principal
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
-import { SuggestionsComponent } from  './components/suggestions/suggestions.component';
-import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardComponent } from './components/card/card.component';
-import { DetailcardComponent } from './components/detailcard/detailcard.component';
+import { DetailcardComponent} from './components/card/detailcard.component';
+import { SuggestionsComponent } from  './components/suggestions/suggestions.component';
+import { DetailsuggestionsComponent} from './components/suggestions/detailsuggestions.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 // Aqui especifico las rutas de la aplicacion
@@ -21,8 +24,10 @@ const routes : Routes = [
   { path: '', redirectTo:'dashboard', pathMatch: 'full'},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent},
-  { path: 'suggestion', component: SuggestionsComponent}
+  { path: 'suggestion', component: SuggestionsComponent},
+  { path: 'detailcard', component: DetailcardComponent},
+  { path: 'detailsuggestions', component: DetailsuggestionsComponent},
+  { path: 'projects' , component: ProjectsComponent}
 ]
 
 
@@ -31,11 +36,11 @@ const routes : Routes = [
     AppComponent,
     DashboardComponent,    
     LoginComponent,
-    SuggestionsComponent,
-    RegisterComponent,
     NavbarComponent,
     CardComponent,
-    DetailcardComponent
+    DetailcardComponent,
+    SuggestionsComponent,    
+    DetailsuggestionsComponent, ProjectsComponent
   ],
   imports: [
     BrowserModule,
