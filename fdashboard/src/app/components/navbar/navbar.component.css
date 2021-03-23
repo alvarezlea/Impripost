@@ -7,9 +7,27 @@
     top: 10px;
     right: 25px;
 }
+.dropdown{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
 
 .navbar-brand {
     padding-bottom: 10px !important;
+}
+
+.atr-aviso {
+    position: absolute;
+    top: 22px;
+    right: 80px;   
+    color:rgb(249 249 249);
+}
+.atr-proyecto{
+    position: absolute;
+    top: 22px;
+    right: 130px;   
+    color:rgb(249 249 249);    
 }
 
 /* Dispositivos mobile (landscape tablets, 768px and up) */
@@ -17,8 +35,23 @@
 
     .alinear-derecha{
         position: relative;
-        top: 10px;
-        left: 2px;
-    }    
-   
+        top: 10px;  
+        left: 50px;
+    } 
+    .dropdown{
+        position: relative;
+        top: 10px;  
+        left: 50px;
+    }        
+    .atr-proyecto{
+        position: absolute;
+        top: 155px;
+        right: 160px;   
+        color:rgb(249 249 249);    
+    }   
+    .atr-aviso {
+        position: absolute;
+        top: 155px;
+        right: 80px;    
+    }       
 }
