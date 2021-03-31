@@ -1,3 +1,19 @@
+/* Color del navbar */
+.bg-info {
+    /* background-color: #17a2b8!important; */
+    /* background-color: #f18f6a !important; */
+    /* background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(241,165,106,1) 78%,  rgba(246,96,9,1) 100%); */
+    background: rgb(255,51,0); 
+    background: linear-gradient(90deg, rgba(255,51,0,1) 0%, rgba(246,96,9,1) 0%, rgba(255,51,0,1) 100%, rgba(241,143,106,1) 100%);
+}
+
+/* .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color:#e4e2e2 !important;
+} */
+/* .title{
+    color:#c7c7c7;  
+} */
 .alinear-centrar{
     padding-left: 50px !important;
 }

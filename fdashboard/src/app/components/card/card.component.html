@@ -1,7 +1,6 @@
 <!--
-    https://getbootstrap.com/docs/4.0/components/card/
     Propiedades de la caja con colores 
-    border-success 
+border-success 
 border-danger
 border-warning
 border-info
@@ -9,21 +8,32 @@ border-light
 border-dark
 -->
 
-
 <div class="row">
-    <div class="col-sm-4" *ngFor="let recipient of tarjetasDelServicioMulti">
 
-        <!-- <ng-container *ngIf="recipient[0] == '1'">            -->
-        <div  class="card border-info mb-3" style="max-width: 18rem;">       
-            <!-- <div class="card-header"><i class="fa fa-tags icon"></i><p class="card-header-txt">{{recipient[1]}}</p></div> -->
-            <!-- <div class="card-header"><i class="fa fa-bell icon"></i><p class="card-header-txt">{{recipient[1]}}</p></div> -->
-            <div class="card-header"><i class="fa fa-thumbtack icon"></i><p class="card-header-txt">{{recipient[1]}}</p></div>
-            <div class="card-body text-primary">
-                <p class="card-text">{{recipient[2]}}</p>
-                <a href="detailcard" class="btn btn-primary">Seguir leyendo</a>
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Portal</h1>
+                <p class="subtitulo">Proyectos y Desarrollos</p>
             </div>
-        </div>         
-        <!-- </ng-container>      -->
-       
+            <div class="col-sm-12 imagen"></div>
+        </div>
     </div>
-</div> 
+    <!-- <div class="col-sm-1"></div> -->
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="col-sm-6 box" *ngFor="let elemento of tarjetasDelServicioMulti">
+                <!-- <ng-container *ngIf="elemento[0] == '1'">            -->
+                <div  class="card mb-1" style="max-width: 18rem;">       
+                    <div class="card-header"><i class="fa fa-thumbtack icon"></i><p class="card-header-txt">{{elemento[1]}}</p></div>
+                    <div class="card-body text-primary">
+                        <p class="card-text">{{elemento[2]}}</p>
+                        <a href="detailcard"><i class="fa fa-chevron-circle-right"></i></a>
+                    </div>
+                </div>         
+                <!-- </ng-container>      -->       
+            </div>
+        </div> 
+    </div>
+
+</div>

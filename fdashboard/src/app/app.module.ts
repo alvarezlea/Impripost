@@ -16,6 +16,7 @@ import { DetailcardComponent} from './components/card/detailcard.component';
 import { SuggestionsComponent } from  './components/suggestions/suggestions.component';
 import { DetailsuggestionsComponent} from './components/suggestions/detailsuggestions.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 // Aqui especifico las rutas de la aplicacion
@@ -40,7 +41,7 @@ const routes : Routes = [
     CardComponent,
     DetailcardComponent,
     SuggestionsComponent,    
-    DetailsuggestionsComponent, ProjectsComponent
+    DetailsuggestionsComponent, ProjectsComponent, FooterComponent
   ],
   imports: [
     BrowserModule,

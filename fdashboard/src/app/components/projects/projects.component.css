@@ -1,3 +1,11 @@
+.jumbotron {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(236, 31, 31);
+}
+.centrar{
+    text-align: center;
+    /* padding-bottom: 30px; */
+}
 .table-wrapper {
     background: #fff;
     padding: 20px 25px;
@@ -8,8 +16,8 @@
 .table-title {        
     padding-bottom: 15px;
     /* background: #435d7d; */
-    background: #068194;
-    color: #fff;
+    /* background: #c7c7c7; */
+    color: #f66009;
     padding: 16px 30px;
     margin: -20px -25px 10px;
     border-radius: 3px 3px 0 0;
@@ -112,10 +120,10 @@ table.table .avatar {
     color: #666;
 }	
 .pagination li.active a, .pagination li.active a.page-link {
-    background: #03A9F4;
+    background: #F44336;
 }
 .pagination li.active a:hover {        
-    background: #0397d6;
+    background: #F44336;
 }
 .pagination li.disabled i {
     color: #ccc;

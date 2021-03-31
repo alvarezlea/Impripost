@@ -1,5 +1,8 @@
+.jumbotron {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(236, 31, 31);
+}
 .centrar{
     text-align: center;
-    padding-top: 20px;
     padding-bottom: 30px;
 }

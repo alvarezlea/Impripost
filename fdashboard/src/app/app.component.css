@@ -1,8 +1,4 @@
-/* .jumbotron {
-    background-color: #888;
-    color: white;
-} */
-
 .jumbotron {
+    background-image: url("../assets/img/bg_dotted.png");
     padding: 2rem 2rem;
 }

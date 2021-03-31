@@ -1,42 +1,42 @@
 <br>
 
 <div class="container">
+    <div class="jumbotron">
 
-    <h4 class="centrar">Detalle de sugerencias</h4>
+        <h4 class="centrar">Detalle de sugerencias</h4>
 
-    <div class="table-responsive">
+        <div class="table-responsive">
 
-        
-
-        <table class="table table-striped w-auto">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Sector</th>
-                <th scope="col">Sugerencia</th>
-                <th scope="col">Ación</th>
-            </tr>
-            </thead>
-            <tbody>
+            <table class="table table-striped w-auto">
+                <thead class="thead-light">
                 <tr>
-                    <tr *ngFor="let elemento of listaDeSugerencias">
-                        <th scope="row">{{elemento[0]}}</th>   
-                        <td>{{elemento[1]}}</td>
-                        <td>{{elemento[2]}}</td>
-                        <td>{{elemento[3]}}</td>
-                        <td>{{elemento[4]}}</td>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Sector</th>
+                    <th scope="col">Sugerencia</th>
+                    <th scope="col">Ación</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <tr *ngFor="let elemento of listaDeSugerencias">
+                            <th scope="row">{{elemento[0]}}</th>   
+                            <td>{{elemento[1]}}</td>
+                            <td>{{elemento[2]}}</td>
+                            <td>{{elemento[3]}}</td>
+                            <td>{{elemento[4]}}</td>
 
-                        <td *ngIf="elemento[5] === 0; else changeIcon"><a href="detailsuggestions" class="btn btn-warning" (click)="cambiarestado()"><i class="fa fa-envelope"></i></a></td>
+                            <td *ngIf="elemento[5] === 0; else changeIcon"><a href="detailsuggestions" class="btn btn-warning" (click)="cambiarestado()"><i class="fa fa-envelope"></i></a></td>
 
-                        <ng-template #changeIcon>
-                            <td><a href="detailsuggestions" class="btn btn-success"><i class="fa fa-envelope-open"></i></a></td>
-                        </ng-template>
+                            <ng-template #changeIcon>
+                                <td><a href="detailsuggestions" class="btn btn-success"><i class="fa fa-envelope-open"></i></a></td>
+                            </ng-template>
 
-                    </tr>                    
-            </tbody>
-        </table>
+                        </tr>                    
+                </tbody>
+            </table>
 
+        </div>
       </div>
   </div>

@@ -1,0 +1,238 @@
+﻿==================================
+API DEMO
+==================================
+https://mockapi.io/projects/6063658d0133350017fd32f5
+alvarez.leandro.a@gmail.com
+peperina34
+
+==================================
+EFECTOS CSS
+==================================
+https://tutorialesenlinea.es/Plantillas/Hover.html
+
+
+https://help.ubuntu.com/
+
+Color naranja
+style="background: #f18f6a !important;"
+
+==================================
+COMO CREAR UN LOGIN
+==================================
+https://justdigital.agency/blog/login-y-autenticacion-con-angular/
+
+
+==================================
+STORAGE LOCAL
+==================================
+https://itelisoft.com/como-utilizar-el-localstorage-en-angula/
+
+
+
+
+
+https://codingpotions.com/angular-login-sesion
+
+https://codingpotions.com/angular-componentes-routing
+
+https://es.lipsum.com/
+
+==================================
+CAMBIAR CARACTERES AUTOMATICAMENTE
+==================================
+
+git config core.autocrlf true
+
+=====
+FONTS
+=====
+
+npm install --save @fortawesome/fontawesome-free
+luego en el archivo angular.json agregar lo siguiente
+
+        "styles": [
+           "node_modules/@fortawesome/fontawesome-free/css/all.css"
+        ]
+o esto (cualquiera de las dos opciones sirve)
+
+"scripts": [
+          "node_modules/@fortawesome/fontawesome-free/js/all.js"
+        ]
+y luego los usas agregando los iconos en los html:
+
+<i class="fa fa-camera-retro fa-lg"></i>
+
+=======
+ICONOS
+=======
+
+https://fontawesome.com/icons?d=gallery&p=14
+
+
+===============
+  CSS GRADIENT
+===============
+https://cssgradient.io/
+
+==================
+RECURSOS BOOTSTRAP
+==================
+https://getbootstrap.com/docs/4.0/components/card/ 
+
+
+
+
+
+Para la clase de desarrollo y tecnologia
+https://www.mdp.edu.ar/uabierta/editorialvirtual/06/vinculo15.html
+
+
+
+
+
+
+
+
+COMO TRABAJAR CON HASH y ARRAY
+
+
+<!-- <h3><u>*ngFor (desde datos servicio)</u></h3>
+<ul>
+    <li *ngFor="let card of tarjetasDelServicio">
+        {{card}}
+    </li>
+</ul> -->
+
+
+<!--
+    https://getbootstrap.com/docs/4.0/components/card/
+    Propiedades de la caja con colores 
+    border-success 
+border-danger
+border-warning
+border-info
+border-light
+border-dark
+-->
+
+<ul>
+    <li *ngFor="let card of tarjetasDelServicioMulti">
+        {{card[1]}}
+    </li>
+</ul> 
+
+
+<div class="row">
+    <div class="col-sm-4" *ngFor="let recipient of tarjetasDelServicioHash | keyvalue">
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header"><i class="fa fa-tags"></i><a class="card-header-txt"> {{recipient.key}}</a></div>
+            <div class="card-body text-primary">
+                <h5 class="card-title">{{recipient.key}}</h5>
+                <p class="card-text">{{recipient.value}}</p>
+                <a href="#" class="btn btn-primary">Seguir leyendo</a>
+            </div>
+        </div>        
+    </div>
+</div> 
+
+
+<!-- <div class="row">
+    <div class="col-sm-4" *ngFor="let recipient of tarjetasDelServicioHash | keyvalue">
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header"><i class="fa fa-tags"></i><a class="card-header-txt"> {{recipient.key}}</a></div>
+            <div class="card-body text-primary">
+                <h5 class="card-title">{{recipient.key}}</h5>
+                <p class="card-text">{{recipient.value}}</p>
+                <a href="#" class="btn btn-primary">Seguir leyendo</a>
+            </div>
+        </div>        
+    </div>
+</div> --
+
+====================
+Y DESDE EL 
+====================
+
+import { Injectable } from '@angular/core';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+
+
+export class CardService {
+
+  multi = [ 
+            [1, "Chat boot IA", "Se trata de un proyecto que se penso con la idea de dar un servicio de chat desantendido."], 
+            [2, "Desarrollo Web Mobile", "Proyecto para armar un departamento de desarrollo para dispositivos móviles."],
+            [3, "Desarrollo xx1", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."],
+            [4, "Desarrollo xx2", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."],
+            [5, "Desarrollo xx3", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."]
+          ]
+
+
+  /// con hash  
+  myMap = new Map([
+    ["Chat boot IA", "Se trata de un proyecto que se penso con la idea de dar un servicio de chat desantendido."],
+    ["Desarrollo Web Mobile", "Proyecto para armar un departamento de desarrollo para dispositivos móviles."],
+    ["Desarrollo xx1", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."],
+    ["Desarrollo xx2", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."],
+    ["Desarrollo xx3", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."],
+    ["Desarrollo xx4", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."],
+    ["Desarrollo xx5", "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno."]
+  ])
+  // con array
+  data : string[] = [
+    'Daniel',
+    'Juan',
+    'María',
+    'Ana'
+  ]
+
+  constructor() { 
+
+      //Iterate over map entries
+      for (let entry of this.myMap.entries()) {
+        console.log(entry[0], entry[1]);    //"Lokesh" 37 "Raj" 35 "John" 40
+      }
+
+      console.log(this.multi[0][0]);
+      console.log(this.multi[0][1]);
+      console.log(this.multi[0][2]);
+      console.log(this.multi[1][0]);
+      console.log(this.multi[1][1]);
+      console.log(this.multi[1][2]);
+
+   }
+
+}
+
+
+====================================================00
+
+
+$(document).ready(function(){
+	// Activate tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	// Select/Deselect checkboxes
+	var checkbox = $('table tbody input[type="checkbox"]');
+	$("#selectAll").click(function(){
+		if(this.checked){
+			checkbox.each(function(){
+				this.checked = true;                        
+			});
+		} else{
+			checkbox.each(function(){
+				this.checked = false;                        
+			});
+		} 
+	});
+	checkbox.click(function(){
+		if(!this.checked){
+			$("#selectAll").prop("checked", false);
+		}
+	});
+});
+
