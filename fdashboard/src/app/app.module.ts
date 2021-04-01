@@ -17,6 +17,7 @@ import { SuggestionsComponent } from  './components/suggestions/suggestions.comp
 import { DetailsuggestionsComponent} from './components/suggestions/detailsuggestions.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 // Aqui especifico las rutas de la aplicacion
@@ -53,7 +54,7 @@ const routes : Routes = [
       { enableTracing : false }
     ),
     FontAwesomeModule,
- 
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

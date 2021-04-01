@@ -8,8 +8,7 @@
                         
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Crear nuevo</span></a>
-                        <!-- <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						 -->
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="fa fa-tags"></i> <span>Nuevo</span></a>
                     </div>
                 </div>
             </div>
@@ -32,35 +31,35 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr *ngFor="let item of listaDeProyectos | keyvalue | paginate : {
+                           itemsPerPage: tableSize,
+                           currentPage: page,
+                           totalItems: count
+                        };">                    
 
-                    <tr *ngFor="let elemento of listaDeProyectos">                    
-                        <td *ngIf="elemento[6] === 1">{{elemento[0]}}</td>
-                        <td *ngIf="elemento[6] === 1">{{elemento[1]}}</td>
-                        <td *ngIf="elemento[6] === 1">{{elemento[2]}}</td>
-                        <td *ngIf="elemento[6] === 1">{{elemento[3]}}</td>
-                        <td *ngIf="elemento[6] === 1">{{elemento[4]}}</td>
-                        <td *ngIf="elemento[6] === 1">{{elemento[5]}}</td>
-                        <td *ngIf="elemento[6] === 1">
+                        <td *ngIf="item.value.estado_id > 0">{{item.value.proyecto_id}}</td>
+                        <td *ngIf="item.value.estado_id > 0">{{item.value.descripcion}}</td>
+                        <td *ngIf="item.value.estado_id > 0">{{item.value.detalle}}</td>
+                        <td *ngIf="item.value.estado_id > 0">{{item.value.facha_tentativa_inicio}}</td>
+                        <td *ngIf="item.value.estado_id > 0">{{item.value.fecha_tentativa_fin}}</td>
+                        <td *ngIf="item.value.estado_id > 0">% {{item.value.porcentaje}}</td>
+                        <td *ngIf="item.value.estado_id > 0">
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pen" data-toggle="tooltip" title="Edit"></i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-alt" data-toggle="tooltip" title="Delete"></i></a>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
+                <div class="d-flex justify-content-center">
+                    <pagination-controls 
+                    responsive="true" 
+                    previousLabel="Anterior" 
+                    nextLabel="Siguiente" 
+                    (pageChange)="onTableDataChange($event)">
+                    </pagination-controls>
+                </div>
             </div>
-        </div>
     </div>
 
     <!-- Edit Modal HTML -->
@@ -163,3 +162,8 @@
         </div>
     </div>    
 </div>
+
+
+<!-- <div *ngFor="let item of listaDeProyectos | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value.descripcion}}</b>
+</div> -->
