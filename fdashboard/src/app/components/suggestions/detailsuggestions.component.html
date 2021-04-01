@@ -11,8 +11,7 @@
                 <thead class="thead-light">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombre y apellido</th>
                     <th scope="col">Sector</th>
                     <th scope="col">Sugerencia</th>
                     <th scope="col">Ación</th>
@@ -20,15 +19,21 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <tr *ngFor="let elemento of listaDeSugerencias">
-                            <th scope="row">{{elemento[0]}}</th>   
-                            <td>{{elemento[1]}}</td>
-                            <td>{{elemento[2]}}</td>
-                            <td>{{elemento[3]}}</td>
-                            <td>{{elemento[4]}}</td>
+                        <tr *ngFor="let item of listaDeSugerencias | keyvalue | paginate : {
+                            itemsPerPage: tableSize,
+                            currentPage: page,
+                            totalItems: count
+                         };">                          
 
-                            <td *ngIf="elemento[5] === 0; else changeIcon"><a href="detailsuggestions" class="btn btn-warning" (click)="cambiarestado()"><i class="fa fa-envelope"></i></a></td>
+                            <th scope="row">{{item.value.proyecto_id}}</th>   
+                            <td>{{item.value.usuario}}</td>
+                            <td>{{item.value.departamento}}</td>
+                            <td>{{item.value.detalle}}</td>
 
+                            <!-- Sugerencia nueva sin leer -->
+                            <td *ngIf="item.value.estado_id === 5 ; else changeIcon"><a href="detailsuggestions" class="btn btn-warning" (click)="cambiarestado()"><i class="fa fa-envelope"></i></a></td>
+
+                            <!-- Sugerencias ya leidas -->
                             <ng-template #changeIcon>
                                 <td><a href="detailsuggestions" class="btn btn-success"><i class="fa fa-envelope-open"></i></a></td>
                             </ng-template>
@@ -36,7 +41,16 @@
                         </tr>                    
                 </tbody>
             </table>
-
+            <div class="clearfix">
+                <div class="d-flex justify-content-center">
+                    <pagination-controls 
+                    responsive="true" 
+                    previousLabel="Anterior" 
+                    nextLabel="Siguiente" 
+                    (pageChange)="onTableDataChange($event)">
+                    </pagination-controls>
+                </div>
+            </div>
         </div>
       </div>
   </div>

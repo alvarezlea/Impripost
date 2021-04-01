@@ -10,35 +10,39 @@ import { Proyecto } from '../../models/proyecto.model'
 
 export class ProjectsComponent implements OnInit {
 
-  // listaDeProyectos : ( number | string)[][]
-
-   listaDeProyectos: Proyecto[] = [];
-  
-  constructor( public projectsService: ProjectsService) { 
-    // this.listaDeProyectos = this.projectsService.tabla;
-  }
+  listaDeProyectos: Proyecto[] = [];
+  page = 1;
+  count = 0;
+  tableSize = 5;
+   
+  constructor( public projectsService: ProjectsService) { }
 
   ngOnInit(): void {
-
-    this.projectsService.list().subscribe(data => {
-      this.listaDeProyectos = data;
-      // console.log(this.listaDeProyectos);
-
-      for (let entry of this.listaDeProyectos.entries()) {
-        console.log(entry[0], entry[1].descripcion);   
-      }    
-
-
-
-    });
-
-    //Iterate over map entries
-    // console.log("PASO...");
-    // for (let entry of this.listaDeProyectos.entries()) {
-    //     console.log(entry[0], entry[1]);   
-    // }    
-
+    this.fetchPosts();   
   }
 
+  fetchPosts(): void {
+    this.projectsService.list()
+      .subscribe(
+        response => {
+          // this.listaDeProyectos = response;
+          this.listaDeProyectos = response.filter(data => data.tipo_proyecto_id === 1);
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  onTableDataChange(event){
+    this.page = event;
+    this.fetchPosts();
+  }  
+
+  onTableSizeChange(event): void {
+    this.tableSize = event.target.value;
+    this.page = 1;
+    this.fetchPosts();
+  } 
 
 }

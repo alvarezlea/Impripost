@@ -8,5 +8,5 @@ export interface Proyecto {
   departamento: string;
   estado_id: number;
   tipo_proyecto_id: number;
-  usuario_id: number;
+  usuario: string;
 }
