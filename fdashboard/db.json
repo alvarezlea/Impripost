@@ -1,0 +1,401 @@
+{
+  "proyectos": [
+    {
+      "id": 1,
+      "descripcion": " Chat boot IA",
+      "detalle": " Se trata de un proyecto que se penso con la idea de dar un servicio de chat desantendido.",
+      "timestamp": 1617221113,
+      "fecha_tentativa_inicio": "30/03/2021",
+      "fecha_tentativa_fin": "10/06/2021",
+      "departamento": "Sistemas",
+      "estado_id": 2,
+      "tipo_proyecto_id": 1,
+      "usuario": "Javier",
+      "porcentaje": 80
+    },
+    {
+      "id": 2,
+      "descripcion": "Desarrollo Web Mobile",
+      "detalle": "Proyecto para armar un departamento de desarrollo para dispositivos móviles.",
+      "timestamp": 1617221053,
+      "fecha_tentativa_inicio": "30/03/2021",
+      "fecha_tentativa_fin": "09/09/2021",
+      "departamento": "Sistemas",
+      "estado_id": 2,
+      "tipo_proyecto_id": 1,
+      "usuario": "Leandro",
+      "porcentaje": 80
+    },
+    {
+      "id": 3,
+      "descripcion": "descripcion 3",
+      "detalle": "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno.",
+      "timestamp": 1617220993,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 3",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 3",
+      "departamento": "departamento 3",
+      "estado_id": 5,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 3",
+      "porcentaje": 59
+    },
+    {
+      "id": 4,
+      "descripcion": "descripcion 4",
+      "detalle": "detalle 4",
+      "timestamp": 1617220933,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 4",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 4",
+      "departamento": "departamento 4",
+      "estado_id": 4,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 4",
+      "porcentaje": 63
+    },
+    {
+      "id": 5,
+      "descripcion": "descripcion 5",
+      "detalle": "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno.",
+      "timestamp": 1617220873,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 5",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 5",
+      "departamento": "departamento 5",
+      "estado_id": 4,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 5",
+      "porcentaje": 70
+    },
+    {
+      "id": 6,
+      "descripcion": "descripcion 6",
+      "detalle": "Mattis arcu porta tortor blandit sollicitudin sociosqu risus accumsan in aenean, fusce dignissim egestas pretium neque facilisi ac nascetur venenatis, senectus ultrices nunc sodales donec tristique etiam condimentum praesent. Hendrerit nam pretium iaculis montes nisl placerat egestas sem, justo consequat inceptos luctus fames felis sapien eros, sollicitudin ante dictum mollis sociis tellus vel. Congue velit aptent primis ultrices facilisis duis orci viverra, ante fringilla molestie eu dignissim quam aenean faucibus sapien, enim cubilia scelerisque proin bibendum ac nostra.",
+      "timestamp": 1617220813,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 6",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 6",
+      "departamento": "departamento 6",
+      "estado_id": 3,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 6",
+      "porcentaje": 78
+    },
+    {
+      "id": 7,
+      "descripcion": "descripcion 7",
+      "detalle": "detalle 7",
+      "timestamp": 1617220753,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 7",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 7",
+      "departamento": "departamento 7",
+      "estado_id": 5,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 7",
+      "porcentaje": 77
+    },
+    {
+      "id": 8,
+      "descripcion": "descripcion 8",
+      "detalle": "detalle 8",
+      "timestamp": 1617220693,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 8",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 8",
+      "departamento": "departamento 8",
+      "estado_id": 2,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 8",
+      "porcentaje": 58
+    },
+    {
+      "id": 9,
+      "descripcion": "descripcion 9",
+      "detalle": "detalle 9",
+      "timestamp": 1617220633,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 9",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 9",
+      "departamento": "departamento 9",
+      "estado_id": 3,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 9",
+      "porcentaje": 51
+    },
+    {
+      "id": 10,
+      "descripcion": "descripcion 10",
+      "detalle": "detalle 10",
+      "timestamp": 1617220573,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 10",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 10",
+      "departamento": "departamento 10",
+      "estado_id": 4,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 10",
+      "porcentaje": 88
+    },
+    {
+      "id": 11,
+      "descripcion": "descripcion 11",
+      "detalle": "detalle 11",
+      "timestamp": 1617220513,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 11",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 11",
+      "departamento": "departamento 11",
+      "estado_id": 5,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 11",
+      "porcentaje": 44
+    },
+    {
+      "id": 12,
+      "descripcion": "descripcion 12",
+      "detalle": "detalle 12",
+      "timestamp": 1617220453,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 12",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 12",
+      "departamento": "departamento 12",
+      "estado_id": 5,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 12",
+      "porcentaje": 92
+    },
+    {
+      "id": 13,
+      "descripcion": "descripcion 13",
+      "detalle": "detalle 13",
+      "timestamp": 1617220393,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 13",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 13",
+      "departamento": "departamento 13",
+      "estado_id": 5,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 13",
+      "porcentaje": 67
+    },
+    {
+      "id": 14,
+      "descripcion": "descripcion 14",
+      "detalle": "detalle 14",
+      "timestamp": 1617220333,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 14",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 14",
+      "departamento": "departamento 14",
+      "estado_id": 3,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 14",
+      "porcentaje": 65
+    },
+    {
+      "id": 15,
+      "descripcion": "descripcion 15",
+      "detalle": "detalle 15",
+      "timestamp": 1617220273,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 15",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 15",
+      "departamento": "departamento 15",
+      "estado_id": 4,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 15",
+      "porcentaje": 24
+    },
+    {
+      "id": 16,
+      "descripcion": "descripcion 16",
+      "detalle": "detalle 16",
+      "timestamp": 1617220213,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 16",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 16",
+      "departamento": "departamento 16",
+      "estado_id": 1,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 16",
+      "porcentaje": 21
+    },
+    {
+      "id": 17,
+      "descripcion": "descripcion 17",
+      "detalle": "detalle 17",
+      "timestamp": 1617220153,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 17",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 17",
+      "departamento": "departamento 17",
+      "estado_id": 5,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 17",
+      "porcentaje": 35
+    },
+    {
+      "id": 18,
+      "descripcion": "esta es una prueba para comprobar el largo de texto y considerar si es necesario cortarlo son un substr",
+      "detalle": "detalle 18",
+      "timestamp": 1617220093,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 18",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 18",
+      "departamento": "departamento 18",
+      "estado_id": 2,
+      "tipo_proyecto_id": 1,
+      "usuario": "usuario 18",
+      "porcentaje": 26
+    },
+    {
+      "id": 19,
+      "descripcion": "descripcion 19",
+      "detalle": "detalle 19",
+      "timestamp": 1617220033,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 19",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 19",
+      "departamento": "departamento 19",
+      "estado_id": 5,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 19",
+      "porcentaje": 83
+    },
+    {
+      "id": 20,
+      "descripcion": "descripcion 20",
+      "detalle": "detalle 20",
+      "timestamp": 1617219973,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 20",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 20",
+      "departamento": "departamento 20",
+      "estado_id": 3,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 20",
+      "porcentaje": 29
+    },
+    {
+      "id": 21,
+      "descripcion": "descripcion 21 MODIFICADO",
+      "detalle": "detalle 20",
+      "timestamp": 1617219973,
+      "fecha_tentativa_inicio": "fecha_tentativa_inicio 21",
+      "fecha_tentativa_fin": "fecha_tentativa_fin 21",
+      "departamento": "departamento 21",
+      "estado_id": 3,
+      "tipo_proyecto_id": 2,
+      "usuario": "usuario 21",
+      "porcentaje": 29
+    },
+    {
+      "id": 22,
+      "descripcion": "",
+      "detalle": "Prueba demo 1",
+      "timestamp": "",
+      "fecha_tentativa_inicio": "",
+      "fecha_tentativa_fin": "",
+      "departamento": "sistemas",
+      "porcentaje": "0",
+      "estado_id": 5,
+      "tipo_proyecto_id": 2,
+      "usuario": "Leandro Demo"
+    }
+  ],
+  "tipo_proyecto": [
+    {
+      "tipo_proyecto_id": "1",
+      "descripcion": "proyecto"
+    },
+    {
+      "tipo_proyecto_id": "2",
+      "descripcion": "sugerencia"
+    }
+  ],
+  "estados": [
+    {
+      "estdo_id": "1",
+      "descripcion": "Cancelado"
+    },
+    {
+      "estdo_id": "2",
+      "descripcion": "Activo"
+    },
+    {
+      "estdo_id": "3",
+      "descripcion": " Terminado "
+    },
+    {
+      "estdo_id": "4",
+      "descripcion": "Revisando"
+    },
+    {
+      "estdo_id": "5",
+      "descripcion": "Nuevo"
+    }
+  ],
+  "usuario": [
+    {
+      "usario_id": "1",
+      "nombre_apellido": "admin",
+      "estado": 1,
+      "rol": "rol 1",
+      "password": "admin"
+    },
+    {
+      "usario_id": "2",
+      "nombre_apellido": "Javier",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "3",
+      "nombre_apellido": "Leandro",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "4",
+      "nombre_apellido": "Alejandro Santarelli",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "5",
+      "nombre_apellido": "Mauricio Pratola",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "6",
+      "nombre_apellido": "Jorge Insfran",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "7",
+      "nombre_apellido": "Alejandra Suppo",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "8",
+      "nombre_apellido": "Dolores Dris",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "9",
+      "nombre_apellido": "Grabriela Zurita",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "10",
+      "nombre_apellido": "Karina Penela",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    },
+    {
+      "usario_id": "11",
+      "nombre_apellido": "Natalia Paz",
+      "estado": 1,
+      "rol": "rol 2",
+      "password": "demo"
+    }
+  ]
+}

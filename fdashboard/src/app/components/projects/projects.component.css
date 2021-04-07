@@ -6,6 +6,12 @@
     text-align: center;
     /* padding-bottom: 30px; */
 }
+.spinner-border{
+    position: absolute !important;
+    color: rgb(236, 31, 31);
+    top:42%;
+    left: 50%;
+}
 .table-wrapper {
     background: #fff;
     padding: 20px 25px;

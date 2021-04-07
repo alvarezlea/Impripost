@@ -18,6 +18,7 @@ import { DetailsuggestionsComponent} from './components/suggestions/detailsugges
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 // Aqui especifico las rutas de la aplicacion
@@ -27,7 +28,7 @@ const routes : Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'login', component: LoginComponent},
   { path: 'suggestion', component: SuggestionsComponent},
-  { path: 'detailcard', component: DetailcardComponent},
+  { path: 'detailcard/:id', component: DetailcardComponent},
   { path: 'detailsuggestions', component: DetailsuggestionsComponent},
   { path: 'projects' , component: ProjectsComponent}
 ]
@@ -54,7 +55,8 @@ const routes : Routes = [
       { enableTracing : false }
     ),
     FontAwesomeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

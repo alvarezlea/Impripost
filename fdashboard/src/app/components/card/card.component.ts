@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from 'src/app/services/card.service';
-import { ProjectsService } from 'src/app/services/projects.service';
 import { Proyecto } from '../../models/proyecto.model'
 
 @Component({
@@ -8,32 +7,26 @@ import { Proyecto } from '../../models/proyecto.model'
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
 export class CardComponent implements OnInit {
 
-  // tarjetasDelServicioMulti : ( number | string)[][]
 
-  // constructor(public cardService : CardService ) 
-  // { 
-  //   this.tarjetasDelServicioMulti = this.cardService.tabla;
-  // }
-
-
-  listaDeProyectos: Proyecto[] = [];
+  listaDeTarjetas: Proyecto[] = [];
   page = 1;
   count = 0;
   tableSize = 5;
    
-  constructor( public projectsService: CardService) { }
+  constructor( public cardService: CardService) { }
 
   ngOnInit(): void {
     this.fetchPosts();   
   }
 
   fetchPosts(): void {
-    this.projectsService.list()
+    this.cardService.list()
       .subscribe(
         response => {
-          this.listaDeProyectos = response.filter(data => data.tipo_proyecto_id === 1);
+          this.listaDeTarjetas = response.filter(data => data.tipo_proyecto_id === 1);
           console.log(response);
         },
         error => {
@@ -51,6 +44,5 @@ export class CardComponent implements OnInit {
     this.page = 1;
     this.fetchPosts();
   } 
-
 
 }

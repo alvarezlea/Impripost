@@ -1,7 +1,38 @@
 <div class="container">
     <div class="jumbotron my-2">
 
-        <h1>Detalle del proyecto</h1>
+        <div class="row">
+
+            <div class="col-sm-8">
+                <hr>                
+                <h3>Proyecto: {{descripcion}}</h3>
+                <hr>
+                <p class="txt-format-1">{{detalle}}</p>
+                <hr>                
+            </div>
+            <div class="col-sm-4">
+                <hr>
+                <h4 style="text-align: center;">Estado del proyecto</h4>
+                <p *ngIf="estado_id === 1">Cancelado</p>
+                <p *ngIf="estado_id === 2">Activo</p>
+                <p *ngIf="estado_id === 3">Terminado</p>
+                <p *ngIf="estado_id === 4">Revisando</p>
+                <p *ngIf="estado_id === 5">Nuevo</p>
+                <!-- <p>{{porcentaje}}</p> -->
+                <div class="progress">
+                    <div class="progress-bar w-25 bg-success progress-bar-striped progress-bar-animated" >{{porcentaje}}%</div>                          
+                </div>
+                <hr>
+                <p class="txt-format-2">Id: <b>{{id}}</b></p>
+                <!-- <p>{{tarjeta.timestamp}}</p> -->
+                <!-- <p>{{tarjeta.tipo_proyecto_id}}</p> -->
+                <p class="txt-format-2">Fecha tentativa Inicio: <b>{{facha_tentativa_inicio}}</b></p>
+                <p class="txt-format-2">Fecha tentativa Fin: <b>{{fecha_tentativa_fin}}</b></p>
+                <p class="txt-format-2">Departamento informador: <b>{{departamento}}</b></p>
+                <p class="txt-format-2">Usuario informador: <b>{{usuario}}</b></p>                
+            </div>            
+
+        </div>
 
     </div>
 </div>

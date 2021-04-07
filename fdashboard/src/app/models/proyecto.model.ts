@@ -3,9 +3,10 @@ export interface Proyecto {
   descripcion: string;
   detalle: string;
   timestamp: string;
-  fecha_tentaiva_inicio: string;
-  fecha_tentaiva_fin: string;
+  fecha_tentativa_inicio: string;
+  fecha_tentativa_fin: string;
   departamento: string;
+  porcentaje: string;
   estado_id: number;
   tipo_proyecto_id: number;
   usuario: string;

@@ -8,28 +8,17 @@
                         <h5 class="card-title">Formulario de Sugerencias</h5>        
                         <form [formGroup]="f" autocomplete="off">
                             <div class="form-group">
-                                <label for="nombre">Nombre</label>
+                                <label for="nombre">Nombre y Apellido</label>
                                 <input class="form-control" type="text" formControlName="nombre" id="nombre">
                             </div>
                             <div *ngIf="f.controls.nombre.errors && f.controls.nombre.dirty" class="alert alert-danger">
                                 <div *ngIf="f.controls.nombre.errors.required">El campo es requerido</div>
                                 <div *ngIf="f.controls.nombre.errors.minlength">Cantidad mínima de caracteres ({{f.controls.nombre.errors.minlength.requiredLength}}) no alcanzada</div>
                                 <div *ngIf="f.controls.nombre.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.nombre.errors.maxlength.requiredLength}})  alcanzada</div>
-                                <div *ngIf="f.controls.nombre.errors.conEspacio">No se permiten espacios en este campo</div>
+                                <!-- <div *ngIf="f.controls.nombre.errors.conEspacio">No se permiten espacios en este campo</div> -->
                             </div>
 
-                            <div class="form-group">
-                                    <label for="apellido">Apellido</label>
-                                    <input class="form-control" type="password" formControlName="apellido" id="apellido">
-                            </div>
-                            <div *ngIf="f.controls.apellido.errors && f.controls.apellido.dirty" class="alert alert-danger">
-                                <div *ngIf="f.controls.apellido.errors.required">El campo es requerido</div>
-                                <div *ngIf="f.controls.apellido.errors.minlength">Cantidad mínima de caracteres ({{f.controls.apellido.errors.minlength.requiredLength}}) no alcanzada</div>
-                                <div *ngIf="f.controls.apellido.errors.maxlength">Cantidad máxima de caracteres ({{f.controls.apellido.errors.maxlength.requiredLength}})  alcanzada</div>
-                                <div *ngIf="f.controls.apellido.errors.conEspacio">No se permiten espacios en este campo</div>
-                            </div>
-
-                            <div class="form-group">
+                             <div class="form-group">
                                 <label for="sector">Sector:&nbsp;&nbsp; </label>
                                 <select formControlName="sector">
                                     <option value="administracion">Administración</option>
