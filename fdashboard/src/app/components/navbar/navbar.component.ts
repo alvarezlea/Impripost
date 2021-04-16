@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,14 @@ import {Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  model: NgbDateStruct;
   rol : string = "";
+  lista:string[]=["Activo","Terminado","Cancelado"];
+  seleccionados:string[]=[];
 
-  constructor(private router:Router) 
+  f: FormGroup
+
+  constructor(private fb: FormBuilder, private router:Router) 
   {   
     this.rol  = localStorage.getItem('securityrole')
     if(this.rol != null){
@@ -20,6 +26,15 @@ export class NavbarComponent implements OnInit {
     if (this.rol !== "admin") {
        this.rol = "user"
     }
+
+
+    this.f = fb.group({
+      nombre: '',
+      sector: '',
+      sugerencia: '',      
+    })
+
+
   }
 
 
@@ -38,5 +53,13 @@ export class NavbarComponent implements OnInit {
     });
 
   }
+
+
+  enviar() {
+
+    console.log(this.f.value);
+
+  }  
+
 
 }
