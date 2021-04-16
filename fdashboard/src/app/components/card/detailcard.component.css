@@ -14,5 +14,17 @@
     font-size: 10px !important;
     /* color: #396491; */
 }
-
-
+textarea{
+    width: 450px;
+    max-width: 450px;
+}
+.caja_inline {
+    display: inline-block;
+    width: 100px;
+}
+#messagesuccess{
+    text-align: center;
+}
+#messagerror{
+    text-align: center;
+}

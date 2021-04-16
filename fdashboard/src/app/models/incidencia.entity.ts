@@ -8,8 +8,8 @@ export class Incidencia implements Proyecto  {
     public timestamp: string;
     public fecha_tentativa_inicio: string;
     public fecha_tentativa_fin: string;
-    public departamento: string;
-    public porcentaje: string;
+    public departamento: number;
+    public porcentaje: number;
     public estado_id: number;
     public tipo_proyecto_id: number;
     public usuario: string;
@@ -19,13 +19,13 @@ export class Incidencia implements Proyecto  {
         this.descripcion = "";
         this.detalle= "";
         this.timestamp= "";
-        this.fecha_tentativa_inicio= "";
-        this.fecha_tentativa_fin= "";
-        this.departamento= "";
-        this.porcentaje= "0";
-        this.estado_id = 1;
-        this.tipo_proyecto_id  = 2;
+        this.fecha_tentativa_inicio= "9999-99-99";
+        this.fecha_tentativa_fin= "9999-99-99";
+        this.departamento= 5;                  //'Comercial', 'Sistemas', 'Gerencia', 'Administración', 'Otros'
+        this.porcentaje= 0;
+        this.estado_id = 5;                    //'Cancelado', 'Activo', 'Terminado', 'Revisando', 'Nuevo'
+        this.tipo_proyecto_id  = 1;            //'Proyecto','Sugerencia'
         this.usuario= "";
     }
-              
+       
 }

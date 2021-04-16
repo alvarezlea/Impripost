@@ -1,38 +1,157 @@
 <div class="container">
-    <div class="jumbotron my-2">
+    <div class="jumbotron my-2">        
+        <h3>Detalle del proyecto</h3>
+        <div class="row justify-content-md-end">
+            <a href="#editEmployeeModal" class="btn btn-outline-danger fa fa-pen" data-toggle="modal" (click)="openFormEdit()"> Editar</a>
+        </div>
 
         <div class="row">
-
             <div class="col-sm-8">
                 <hr>                
-                <h3>Proyecto: {{descripcion}}</h3>
+                <h3 align="center">{{dtl.descripcion}}</h3>
                 <hr>
-                <p class="txt-format-1">{{detalle}}</p>
+                <p class="txt-format-1">{{dtl.detalle}}</p>
                 <hr>                
             </div>
             <div class="col-sm-4">
                 <hr>
-                <h4 style="text-align: center;">Estado del proyecto</h4>
-                <p *ngIf="estado_id === 1">Cancelado</p>
-                <p *ngIf="estado_id === 2">Activo</p>
-                <p *ngIf="estado_id === 3">Terminado</p>
-                <p *ngIf="estado_id === 4">Revisando</p>
-                <p *ngIf="estado_id === 5">Nuevo</p>
-                <!-- <p>{{porcentaje}}</p> -->
+                <h4 style="text-align: center;">Detalles</h4>
+                <p *ngIf="dtl.estado_id == 1">Cancelado</p>
+                <p *ngIf="dtl.estado_id == 2">Activo</p>
+                <p *ngIf="dtl.estado_id == 3">Terminado</p>
+                <p *ngIf="dtl.estado_id == 4">Revisando</p>
+                <p *ngIf="dtl.estado_id == 5">Nuevo</p>
                 <div class="progress">
-                    <div class="progress-bar w-25 bg-success progress-bar-striped progress-bar-animated" >{{porcentaje}}%</div>                          
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: {{dtl.porcentaje}}%" >{{dtl.porcentaje}}%</div>                          
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:{{porcentajerest}}%" ></div>                          
                 </div>
                 <hr>
-                <p class="txt-format-2">Id: <b>{{id}}</b></p>
-                <!-- <p>{{tarjeta.timestamp}}</p> -->
-                <!-- <p>{{tarjeta.tipo_proyecto_id}}</p> -->
-                <p class="txt-format-2">Fecha tentativa Inicio: <b>{{facha_tentativa_inicio}}</b></p>
-                <p class="txt-format-2">Fecha tentativa Fin: <b>{{fecha_tentativa_fin}}</b></p>
-                <p class="txt-format-2">Departamento informador: <b>{{departamento}}</b></p>
-                <p class="txt-format-2">Usuario informador: <b>{{usuario}}</b></p>                
+                <p class="txt-format-2">Id: <b>{{dtl.id}}</b></p>
+                <p class="txt-format-2">Fecha tentativa Inicio: <b>{{formatDate(dtl.fecha_tentativa_inicio)}}</b></p>
+                <p class="txt-format-2">Fecha tentativa Fin: <b>{{formatDate(dtl.fecha_tentativa_fin)}}</b></p>
+                <p class="txt-format-2">Departamento informador: 
+                    <b *ngIf="dtl.departamento == 1">Comercial</b>
+                    <b *ngIf="dtl.departamento == 2">Sistemas</b>
+                    <b *ngIf="dtl.departamento == 3">Gerencia</b>
+                    <b *ngIf="dtl.departamento == 4">Administracion</b>
+                    <b *ngIf="dtl.departamento == 5">Otros</b>
+                </p>
+                <p class="txt-format-2">Usuario informador: <b>{{dtl.usuario}}</b></p>                
             </div>            
-
         </div>
-
     </div>
 </div>
+
+<!-- 
+
+    Edit Modal HTML 
+
+-->
+
+<div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form [formGroup]="proyectoForm" (ngSubmit)="onSubmit()">
+                        <div class="modal-header">						
+                            <h4 class="modal-title">Modificar proyecto</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">					
+                            <div class="form-group">
+                                <label>Titulo</label>
+                                <input type="text" class="form-control" formControlName="descripcion" id="descripcion" value="{{dtl.descripcion}}" [(ngModel)]="dtl.descripcion" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Descripción</label>
+                                <textarea class="form-control"  formControlName="detalle" id="detalle" value="{{dtl.detalle}}" [(ngModel)]="dtl.detalle" required></textarea>
+                            </div>  
+                            <hr>  
+                            <!-- Calendario -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Fecha creación</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="{{dtl.fecha_tentativa_inicio}}" 
+                                            name="dp"  ngbDatepicker #d="ngbDatepicker" formControlName="fecha_tentativa_inicio" id="fecha_tentativa_inicio" [(ngModel)]="dtl.fecha_tentativa_inicio" > 
+                                        <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="far fa-calendar-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Fecha finalización</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="{{dtl.fecha_tentativa_fin}}"
+                                            name="dp2"  ngbDatepicker #d2="ngbDatepicker" formControlName="fecha_tentativa_fin" id="fecha_tentativa_fin" [(ngModel)]="dtl.fecha_tentativa_fin" >
+                                        <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"><i class="far fa-calendar-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>     
+                            </div>
+                            <!-- Fin calendario -->                            
+                            <hr>      
+                            <!-- Usuario y Departamento -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Usuario</label>
+                                        <input type="text" class="form-control" formControlName="usuario" id="descripcion" value="{{dtl.usuario}}" [(ngModel)]="dtl.usuario" required>                                     
+                                    </div>
+                                </div>   
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="sector">Departamento:&nbsp;&nbsp; </label><br>
+                                        <select formControlName="departamento" value="{{dtl.departamento}}" [(ngModel)]="dtl.departamento">
+                                            <option [value]=item *ngFor="let item of listasecuencial">{{moreDepartment(item)}}</option>
+                                        </select>
+                                    </div>
+                                </div>                                                                                                                             
+                            </div>	
+                            <hr> 
+                            <!-- Estado -->
+                            <div class="row"> 
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="stado">Estado:&nbsp;&nbsp; </label><br>
+                                        <select formControlName="estado_id" value="{{dtl.estado_id}}" [(ngModel)]="dtl.estado_id" >
+                                            <option [value]=item *ngFor="let item of listasecuencial">{{moreState(item)}}</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="formControlRange">Progreso {{dtl.porcentaje}} %</label>
+                                        <input type="range" class="form-control-range"  (input)="onSearchChangeRange($event.target.value)">                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- mensajes de exito de transaccion -->
+                        <div class="alert alert-success" role="alert" id="messagesuccess">
+                            Los datos se modificaron con exito!
+                        </div>                        
+                        <!-- mensajes de  error de transaccion -->
+                        <div class="alert alert-danger" role="alert" id="messagerror">
+                            UPS! se produjo un error al intentar modificar los datos.
+                        </div>                        
+
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-success" value="Guardar">
+                        </div>
+
+
+                        <!-- <div class="progress">
+                            <div id="progressbar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: {{progress}}%" >{{progress}}%</div>
+                        </div> -->
+                        
+
+                    </form>
+                </div>
+            </div>
+</div>
+
+<!-- <pre>{{ dtl.fecha_tentativa_fin | json }}</pre> -->
+

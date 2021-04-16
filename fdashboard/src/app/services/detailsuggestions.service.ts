@@ -21,31 +21,31 @@ export class DetailsuggestionsService {
 
   list():Observable<Proyecto[]>{
 
-    return this.http.get<Proyecto[]>(`${this.urlEndPoint}`,{headers: this.HttpHeaders});
+    return this.http.get<Proyecto[]>(`${this.urlEndPoint}/proyectos`,{headers: this.HttpHeaders});
 
   }
   
   listById(id:number):Observable<Proyecto>{
 
-    return this.http.get<Proyecto>(`${this.urlEndPoint}/${id}`,{headers: this.HttpHeaders});
+    return this.http.get<Proyecto>(`${this.urlEndPoint}/proyectos/${id}`,{headers: this.HttpHeaders});
 
   }
 
   save(sProyecto:Proyecto):Observable<Proyecto>{  
   
-    return this.http.post<Proyecto>(this.urlEndPoint,sProyecto,{headers: this.HttpHeaders}); 
+    return this.http.post<Proyecto>(`${this.urlEndPoint}/proyectos`,sProyecto,{headers: this.HttpHeaders}); 
 
   }
   
   delete(id:number){  
  
-    return this.http.delete<Proyecto>(`${this.urlEndPoint}/${id}`,{headers:this.HttpHeaders});
+    return this.http.delete<Proyecto>(`${this.urlEndPoint}/proyectos/${id}`,{headers:this.HttpHeaders});
 
   }
   
   update(sProyecto:Proyecto):Observable<Proyecto>{
 
-    return this.http.put<Proyecto>(`${this.urlEndPoint}/${sProyecto.id}`,sProyecto,{headers: this.HttpHeaders}).pipe(
+    return this.http.put<Proyecto>(`${this.urlEndPoint}/proyectos/${sProyecto.id}`,sProyecto,{headers: this.HttpHeaders}).pipe(
   
       map((resp:any)=>{return resp.mess})
   

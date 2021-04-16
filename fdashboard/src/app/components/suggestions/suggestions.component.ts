@@ -39,6 +39,8 @@ export class SuggestionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.getElementById('messagesuccess').style.display = 'none';
+    document.getElementById('messagerror').style.display = 'none';    
   }
 
   enviar() {
@@ -55,18 +57,31 @@ export class SuggestionsComponent implements OnInit {
           let incidencia = new Incidencia();
           incidencia.id = (max.id + 1);
           incidencia.estado_id = 5;
+          incidencia.descripcion = "Proyecto Nuevo";
           incidencia.detalle = this.f.value.sugerencia;
-          incidencia.departamento = this.f.value.sector;   
+          incidencia.departamento = this.f.value.sector * 1;   
+          incidencia.porcentaje = 0;
+          incidencia.tipo_proyecto_id = 2;
           incidencia.usuario = this.f.value.nombre;          
 
           // Guardo el objeto recien creado.
           this.detailsuggestionsService.save(incidencia)
           .subscribe(
             response => {
-              console.log(response);           
+              console.log(response);   
+
+              document.getElementById('messagesuccess').style.display = '';          
+              setTimeout(function(){
+                document.getElementById('messagesuccess').style.display = 'none';
+              },2000);                  
             },
             error => {
               console.log(error);
+
+              document.getElementById('messagerror').style.display = '';          
+              setTimeout(function(){
+                document.getElementById('messagerror').style.display = 'none';
+              },3000);                 
             });
         },
         error => {

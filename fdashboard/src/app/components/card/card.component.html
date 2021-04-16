@@ -22,7 +22,8 @@ border-dark
     <div class="col-sm-8">
         <div class="row">
             <div class="col-sm-6 box" *ngFor="let item of listaDeTarjetas | keyvalue">
-                <div  class="card mb-1" style="width: 18rem;max-width: 18rem !important; height:13rem;max-height: 13rem !important;">       
+                <!-- <div  class="card mb-1" style="width: 18rem;max-width: 18rem !important; height:18rem;max-height: 18rem !important;">        -->
+                <div  class="card mb-1" style="width: 18rem;max-width: 18rem !important; height:15rem;max-height: 15rem !important;">           
                     <div class="card-header"><i class="fa fa-thumbtack icon"></i></div>
                     <div class="card-body text-primary">
                         <p class="card-header-txt">{{item.value.descripcion.substring(0,50)}}...</p>
