@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <div class="container">
     <div class="jumbotron my-2">
         <div class="row">
@@ -9,7 +11,7 @@
                         <form [formGroup]="f" autocomplete="off">
                             <div class="form-group">
                                 <label for="nombre">Nombre y Apellido</label>
-                                <input class="form-control" type="text"  formControlName="nombre" id="nombre">
+                                <input class="form-control" type="text"  formControlName="nombre" id="nombre" [(ngModel)]="f.value.nombre">
                             </div>
                             <div *ngIf="f.controls.nombre.errors && f.controls.nombre.dirty" class="alert alert-danger">
                                 <div *ngIf="f.controls.nombre.errors.required">El campo es requerido</div>
@@ -35,12 +37,12 @@
 
 
                             <!-- mensajes de exito de transaccion -->
-                            <div class="alert alert-success" role="alert" id="messagesuccess">
-                                El nuevo proyecto fue creado con exito!
+                            <div class="alert alert-success" role="alert" id="alertsuccess">
+                                El nueva sugerencia fue creada con exito!
                             </div>                        
                             <!-- mensajes de  error de transaccion -->
-                            <div class="alert alert-danger" role="alert" id="messagerror">
-                                UPS! se produjo un error al intentar crear el proyecto.
+                            <div class="alert alert-danger" role="alert" id="alerterror">
+                                UPS! se produjo un error al intentar guardar la sugerencia.
                             </div>                               
                             <button class="btn btn-success my-3" [disabled]="!f.valid" (click)="enviar()">Enviar</button>
                             

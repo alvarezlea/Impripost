@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VerificarEspacios } from 'src/app/validations/espacios.validator';
-import { DetailsuggestionsService } from 'src/app/services/detailsuggestions.service';
+import { ProjectsService } from 'src/app/services/projects.service';
 import { Incidencia } from 'src/app/models/incidencia.entity';
 import { Proyecto  } from 'src/app/models/proyecto.model';
 
@@ -14,16 +14,9 @@ export class SuggestionsComponent implements OnInit {
   
   listaDeSugerencias: Proyecto[] = []
 
-  formu = {
-    nombre : '',
-    apellido : '',
-    sector:'',
-    sugerencia:''
-  }
-
   f: FormGroup
 
-  constructor(private fb: FormBuilder, public detailsuggestionsService: DetailsuggestionsService) { 
+  constructor(private fb: FormBuilder, public detailsuggestionsService: ProjectsService) { 
 
     this.f = fb.group({
       nombre: ['', Validators.compose([
@@ -39,8 +32,8 @@ export class SuggestionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    document.getElementById('messagesuccess').style.display = 'none';
-    document.getElementById('messagerror').style.display = 'none';    
+    document.getElementById('alertsuccess').style.display = 'none';
+    document.getElementById('alerterror').style.display = 'none';    
   }
 
   enviar() {
@@ -64,29 +57,44 @@ export class SuggestionsComponent implements OnInit {
           incidencia.tipo_proyecto_id = 2;
           incidencia.usuario = this.f.value.nombre;          
 
+          // Limpio los campos de los formularios.
+          this.f = this.fb.group({
+            nombre: ['', Validators.compose([
+              Validators.required,
+              Validators.minLength(4),
+              Validators.maxLength(30)
+              // VerificarEspacios
+            ])],
+            sector: '',
+            sugerencia: '',      
+          }) 
+
           // Guardo el objeto recien creado.
           this.detailsuggestionsService.save(incidencia)
           .subscribe(
             response => {
               console.log(response);   
 
-              document.getElementById('messagesuccess').style.display = '';          
+              document.getElementById('alertsuccess').style.display = '';          
               setTimeout(function(){
-                document.getElementById('messagesuccess').style.display = 'none';
-              },2000);                  
+                document.getElementById('alertsuccess').style.display = 'none';
+                
+                this.f.reset();
+
+              },2000);            
             },
             error => {
               console.log(error);
 
-              document.getElementById('messagerror').style.display = '';          
+              document.getElementById('alerterror').style.display = '';          
               setTimeout(function(){
-                document.getElementById('messagerror').style.display = 'none';
+                document.getElementById('alerterror').style.display = 'none';
               },3000);                 
             });
-        },
-        error => {
+      },
+      error => {
           console.log(error);
-        });  
+      });  
   }
 
 }

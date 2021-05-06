@@ -27,8 +27,8 @@
                 </div>
                 <hr>
                 <p class="txt-format-2">Id: <b>{{dtl.id}}</b></p>
-                <p class="txt-format-2">Fecha tentativa Inicio: <b>{{formatDate(dtl.fecha_tentativa_inicio)}}</b></p>
-                <p class="txt-format-2">Fecha tentativa Fin: <b>{{formatDate(dtl.fecha_tentativa_fin)}}</b></p>
+                <p class="txt-format-2">Fecha tentativa Inicio: <b>{{FormatDate(dtl.fecha_tentativa_inicio)}}</b></p>
+                <p class="txt-format-2">Fecha tentativa Fin: <b>{{FormatDate(dtl.fecha_tentativa_fin)}}</b></p>
                 <p class="txt-format-2">Departamento informador: 
                     <b *ngIf="dtl.departamento == 1">Comercial</b>
                     <b *ngIf="dtl.departamento == 2">Sistemas</b>
@@ -58,18 +58,18 @@
                         </div>
                         <div class="modal-body">					
                             <div class="form-group">
-                                <label>Titulo</label>
+                                <label>Titulo:</label>
                                 <input type="text" class="form-control" formControlName="descripcion" id="descripcion" value="{{dtl.descripcion}}" [(ngModel)]="dtl.descripcion" required>
                             </div>
                             <div class="form-group">
-                                <label>Descripción</label>
+                                <label>Detalle:</label>
                                 <textarea class="form-control"  formControlName="detalle" id="detalle" value="{{dtl.detalle}}" [(ngModel)]="dtl.detalle" required></textarea>
                             </div>  
                             <hr>  
                             <!-- Calendario -->
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <label>Fecha creación</label>
+                                    <label>Fecha creación:</label>
                                     <div class="input-group">
                                         <input class="form-control" placeholder="{{dtl.fecha_tentativa_inicio}}" 
                                             name="dp"  ngbDatepicker #d="ngbDatepicker" formControlName="fecha_tentativa_inicio" id="fecha_tentativa_inicio" [(ngModel)]="dtl.fecha_tentativa_inicio" > 
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label>Fecha finalización</label>
+                                    <label>Fecha finalización:</label>
                                     <div class="input-group">
                                         <input class="form-control" placeholder="{{dtl.fecha_tentativa_fin}}"
                                             name="dp2"  ngbDatepicker #d2="ngbDatepicker" formControlName="fecha_tentativa_fin" id="fecha_tentativa_fin" [(ngModel)]="dtl.fecha_tentativa_fin" >
@@ -95,7 +95,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Usuario</label>
+                                        <label>Usuario:</label>
                                         <input type="text" class="form-control" formControlName="usuario" id="descripcion" value="{{dtl.usuario}}" [(ngModel)]="dtl.usuario" required>                                     
                                     </div>
                                 </div>   
@@ -103,7 +103,7 @@
                                     <div class="form-group">
                                         <label for="sector">Departamento:&nbsp;&nbsp; </label><br>
                                         <select formControlName="departamento" value="{{dtl.departamento}}" [(ngModel)]="dtl.departamento">
-                                            <option [value]=item *ngFor="let item of listasecuencial">{{moreDepartment(item)}}</option>
+                                            <option [value]=item *ngFor="let item of listasecuencial">{{ListDepartment(item)}}</option>
                                         </select>
                                     </div>
                                 </div>                                                                                                                             
@@ -115,7 +115,7 @@
                                     <div class="form-group">
                                         <label for="stado">Estado:&nbsp;&nbsp; </label><br>
                                         <select formControlName="estado_id" value="{{dtl.estado_id}}" [(ngModel)]="dtl.estado_id" >
-                                            <option [value]=item *ngFor="let item of listasecuencial">{{moreState(item)}}</option>
+                                            <option [value]=item *ngFor="let item of listasecuencial">{{ListState(item)}}</option>
                                         </select>
                                     </div>                                    
                                 </div>
@@ -128,12 +128,13 @@
                             </div>
                         </div>
 
+
                         <!-- mensajes de exito de transaccion -->
-                        <div class="alert alert-success" role="alert" id="messagesuccess">
+                        <div class="alert alert-success" role="alert" id="messageSuccess">
                             Los datos se modificaron con exito!
                         </div>                        
                         <!-- mensajes de  error de transaccion -->
-                        <div class="alert alert-danger" role="alert" id="messagerror">
+                        <div class="alert alert-danger" role="alert" id="messageError">
                             UPS! se produjo un error al intentar modificar los datos.
                         </div>                        
 

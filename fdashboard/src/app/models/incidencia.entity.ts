@@ -21,10 +21,10 @@ export class Incidencia implements Proyecto  {
         this.timestamp= "";
         this.fecha_tentativa_inicio= "9999-99-99";
         this.fecha_tentativa_fin= "9999-99-99";
-        this.departamento= 5;                  //'Comercial', 'Sistemas', 'Gerencia', 'Administración', 'Otros'
+        this.departamento= 5;                      //'Comercial', 'Sistemas', 'Gerencia', 'Administración', 'Otros'
         this.porcentaje= 0;
-        this.estado_id = 5;                    //'Cancelado', 'Activo', 'Terminado', 'Revisando', 'Nuevo'
-        this.tipo_proyecto_id  = 1;            //'Proyecto','Sugerencia'
+        this.estado_id = 5;                        //'Cancelado', 'Activo', 'Terminado', 'Revisando', 'Nuevo'
+        this.tipo_proyecto_id  = 1;                //'Proyecto','Sugerencia'
         this.usuario= "";
     }
        

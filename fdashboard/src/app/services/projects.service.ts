@@ -17,13 +17,18 @@ export class ProjectsService {
   private HttpHeaders  = new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'});
   constructor(private http:HttpClient) { }
 
+  listById(id:number):Observable<Proyecto>{
+
+    return this.http.get<Proyecto>(`${this.urlEndPoint}/proyectos/${id}`,{headers: this.HttpHeaders});
+
+  }
 
   list():Observable<Proyecto[]>{
 
     return this.http.get<Proyecto[]>(`${this.urlEndPoint}/proyectos`,{headers: this.HttpHeaders});
 
   }
-  
+
   save(sProyecto:Proyecto):Observable<Proyecto>{
   
     return this.http.post<Proyecto>(`${this.urlEndPoint}/proyectos`,sProyecto,{headers: this.HttpHeaders});
@@ -38,7 +43,7 @@ export class ProjectsService {
   
   update(sProyecto:Proyecto):Observable<Proyecto>{
   
-    return this.http.put<Proyecto>(`${this.urlEndPoint}/proyectos`,sProyecto,{headers: this.HttpHeaders}).pipe(
+    return this.http.put<Proyecto>(`${this.urlEndPoint}/proyectos/${sProyecto.id}`,sProyecto,{headers: this.HttpHeaders}).pipe(
   
       map((resp:any)=>{return resp.mess})
   

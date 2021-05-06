@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardService } from 'src/app/services/card.service';
+import { ProjectsService } from 'src/app/services/projects.service';
 import { Proyecto } from '../../models/proyecto.model'
 
 @Component({
@@ -16,7 +16,7 @@ export class CardComponent implements OnInit {
   count = 0;
   tableSize = 5;
    
-  constructor( public cardService: CardService) { }
+  constructor( public cardService: ProjectsService) { }
 
   ngOnInit(): void {
     this.fetchPosts();   

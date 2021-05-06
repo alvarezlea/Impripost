@@ -20,6 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
+
 // Aqui especifico las rutas de la aplicacion
 
 const routes : Routes = [

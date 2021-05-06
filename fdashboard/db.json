@@ -2,13 +2,13 @@
   "proyectos": [
     {
       "id": 1,
-      "descripcion": "Chat boot IA ok",
+      "descripcion": "XXXXXXXChat boot IA ok",
       "detalle": "Se trata de un proyecto que se penso con la idea de dar un servicio de chat desantendido. Modificado",
       "timestamp": 1617221113,
-      "fecha_tentativa_inicio": "2021-04-16",
+      "fecha_tentativa_inicio": "2021-04-17",
       "fecha_tentativa_fin": "2021-04-24",
       "departamento": 2,
-      "porcentaje": "57",
+      "porcentaje": "73",
       "estado_id": 2,
       "tipo_proyecto_id": 1,
       "usuario": "Javier"
@@ -29,12 +29,12 @@
     {
       "id": 3,
       "descripcion": "descripcion 3",
-      "detalle": "Es simplemente texto de relleno.Es simplemente texto de relleno.Es simplemente texto de relleno.",
+      "detalle": "Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno. Es simplemente texto de relleno.",
       "timestamp": 1617220993,
       "fecha_tentativa_inicio": "2021-03-30",
       "fecha_tentativa_fin": "2021-08-3",
       "departamento": 3,
-      "estado_id": 4,
+      "estado_id": 5,
       "tipo_proyecto_id": 2,
       "usuario": "usuario 3",
       "porcentaje": 59
@@ -125,7 +125,7 @@
       "fecha_tentativa_inicio": "2021-03-30",
       "fecha_tentativa_fin": "2021-08-10",
       "departamento": 3,
-      "estado_id": 4,
+      "estado_id": 5,
       "tipo_proyecto_id": 2,
       "usuario": "usuario 10",
       "porcentaje": 88
@@ -151,7 +151,7 @@
       "fecha_tentativa_inicio": "2021-03-12",
       "fecha_tentativa_fin": "2021-08-12",
       "departamento": 1,
-      "estado_id": 5,
+      "estado_id": 4,
       "tipo_proyecto_id": 2,
       "usuario": "usuario 12",
       "porcentaje": 92
@@ -272,6 +272,19 @@
       "estado_id": 5,
       "tipo_proyecto_id": 2,
       "usuario": "Leandro Demo 1"
+    },
+    {
+      "id": 22,
+      "descripcion": "Leandro (Demo 2)",
+      "detalle": "Esto es una prueba",
+      "timestamp": "",
+      "fecha_tentativa_inicio": "2021-04-22",
+      "fecha_tentativa_fin": "2021-04-24",
+      "departamento": 2,
+      "porcentaje": 50,
+      "estado_id": 5,
+      "tipo_proyecto_id": 1,
+      "usuario": "Leandro"
     }
   ],
   "tipo_proyecto": [
@@ -306,82 +319,82 @@
       "descripcion": "Nuevo"
     }
   ],
-  "usuario": [
+  "usuarios": [
     {
-      "usario_id": "1",
+      "id": 1,
       "nombre_apellido": "admin",
       "estado": 1,
-      "rol": "rol 1",
+      "rol": "admin",
       "password": "admin"
     },
     {
-      "usario_id": "2",
+      "id": 2,
       "nombre_apellido": "Javier",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "admin",
       "password": "demo"
     },
     {
-      "usario_id": "3",
+      "id": 3,
       "nombre_apellido": "Leandro",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "4",
+      "id": 4,
       "nombre_apellido": "Alejandro Santarelli",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "5",
+      "id": 5,
       "nombre_apellido": "Mauricio Pratola",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "6",
+      "id": 6,
       "nombre_apellido": "Jorge Insfran",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "7",
+      "id": 7,
       "nombre_apellido": "Alejandra Suppo",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "8",
+      "id": 8,
       "nombre_apellido": "Dolores Dris",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "9",
+      "id": 9,
       "nombre_apellido": "Grabriela Zurita",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "10",
+      "id": 10,
       "nombre_apellido": "Karina Penela",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     },
     {
-      "usario_id": "11",
+      "id": 11,
       "nombre_apellido": "Natalia Paz",
       "estado": 1,
-      "rol": "rol 2",
+      "rol": "user",
       "password": "demo"
     }
   ]

@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <div class="container">
     <div class="jumbotron my-2">
         <div class="row">
@@ -32,6 +34,12 @@
                             <button class="btn btn-success my-3" [disabled]="!f.valid" (click)="enviar()">Enviar</button>
                     
                         </form>
+
+                        <!-- mensajes de  error de transaccion -->
+                        <div class="alert alert-danger" role="alert" id="messageAuthentication">
+                            UPS! aparentemente no eres un usuario con privilegios.
+                        </div>  
+
                     </div>
                 </div>
             </div> 
@@ -43,7 +51,7 @@
 </div>
 
 
-
+<!-- <pre>{{ user | json }}</pre> -->
 <!-- <br>
 <p>Debug : Validaciones del campo</p>
 <pre>{{ f.controls.usuario.errors | json }}</pre>

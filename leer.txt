@@ -1,9 +1,58 @@
 ﻿==================================
-API DEMO
+API DEMO    MURO
 ==================================
+
 https://mockapi.io/projects/6063658d0133350017fd32f5
 alvarez.leandro.a@gmail.com
 peperina34
+
+
+https://www.mockable.io/
+https://www.mockable.io/a/#/space/demo4930941/rest/Q_avGGAAA
+
+===========
+SERVER JSON
+===========
+Instalar servidor JSON : npm install -g json-server
+Para correr el servidor:  json-server --watch db.json
+
+
+==================================
+PAGINACION
+==================================
+https://www.positronx.io/angular-server-side-pagination-with-ngx-pagination-example/
+
+==================================
+ADHERIR CALENDARIO
+==================================
+ng add @ng-bootstrap/ng-bootstrap
+https://ng-bootstrap.github.io/#/components/datepicker/examples#adapter
+
+==================================
+CRUD
+==================================
+https://www.pluralsight.com/guides/posting-deleting-putting-data-angular
+
+https://codingpotions.com/angular-servicios-llamadas-http
+
+==================================
+BUSCAR EN LISTA DESDE UN INPUT
+==================================
+
+https://docs.angularjs.org/api/ng/filter/filter
+
+==================================
+LINEA DE TIEMPO
+==================================
+https://codepen.io/wdmg/pen/ZWmwNM
+
+
+==================================
+Imagenes de ejemplo
+==================================
+https://www.freepng.es/hd-png/software,2.html
+
+
 
 ==================================
 EFECTOS CSS
@@ -235,4 +284,18 @@ $(document).ready(function(){
 		}
 	});
 });
+
+
+-------------------------------------------------
+
+
+
+    // this.projectsService.list().subscribe(data => {
+    //   this.listaDeProyectos = data;
+    // });  
+
+  // for (let entry of this.listaDeProyectos.entries()) {
+  //   console.log(entry[0], entry[1].descripcion);   
+  // }  
+
 

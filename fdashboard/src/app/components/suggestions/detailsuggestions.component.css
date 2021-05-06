@@ -13,3 +13,16 @@
     left: 50%;
     /* transform: translate(-50%, -50%) !important; */
 }
+
+.estatus-5:before {
+    color: rgb(236, 31, 31);
+    content: "\f0e0";  
+}
+
+.estatus-1, .estatus-2,.estatus-3,.estatus-4:before {
+    color: rgb(15, 207, 15);
+    content: "\f2b6";
+}
+.icon-alert {
+    color: orange;
+}
